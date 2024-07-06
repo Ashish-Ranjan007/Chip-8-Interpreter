@@ -1,9 +1,16 @@
 #pragma once
 
-class Audio
-{
+#include <SDL.h>
+#include <SDL_mixer.h>
+
+class Audio {
+private:
+    Mix_Chunk* beep;
 
 public:
-	void initialize(void);
-
+    
+    Audio();
+    ~Audio();
+    void playSound(void);
+    bool loadMedia(void);
 };
